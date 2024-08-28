@@ -1,3 +1,40 @@
+// Initialize EmailJS with your user ID
+emailjs.init('OeY4ZOGNmP7k99zP3'); // Replace with your actual EmailJS user ID
+
+document.getElementById('sendButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Send email using EmailJS
+    emailjs.send('service_4hvlg6i', 'template_t72mgyr', {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+    })
+    .then(function(response) {
+        console.log('Email sent successfully:', response);
+        alert('Your message has been sent successfully!');
+        // Clear form fields
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('subject').value = '';
+        document.getElementById('message').value = '';
+    }, function(error) {
+        console.log('Failed to send email:', error);
+        alert('Failed to send your message. Please try again later.');
+    });
+});
+
+
+/*--------Rest of the Function---------*/
+
+
 function myMenuFunction(){
     var menuBth = document.getElementById("myNavmenu");
 
@@ -101,5 +138,6 @@ function scrollActive(){
 } 
 
 window.addEventListener("scroll", scrollActive);
+
 
 
