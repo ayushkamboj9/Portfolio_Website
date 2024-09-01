@@ -721,7 +721,7 @@ i{
     color: var(--text-color); /* Ensure text is visible */
 }
 
-.textarea{
+textarea{
     width: 100%;
     height: 250px;
     background: transparent;
