@@ -78,8 +78,8 @@ nav {
     height: 170px; /* Adjust the height according to your needs */
     width: auto;
     display: block;
-    margin-top: -20px;
-    margin-left: -100px;
+    margin-top: 0px;
+    margin-left: 0px;
 }
 
 .nav-name {
@@ -721,7 +721,7 @@ i{
     color: var(--text-color); /* Ensure text is visible */
 }
 
-textarea{
+.textarea{
     width: 100%;
     height: 250px;
     background: transparent;
@@ -753,7 +753,7 @@ textarea{
 
 /*-----Footer Box-----*/
 
-footer{
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -892,6 +892,7 @@ footer{
     }
 }
 
+/*-----Media Query = 540px------*/
 
 @media only screen and (max-width:540px) {
         
@@ -921,10 +922,72 @@ footer{
 }
 
 
+/*-----Media Query = 768px------*/
+
+@media (max-width: 768px) {
+    nav {
+        padding-inline: 5vw;
+    }
+
+    .nav_menu_list {
+        display: none;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .top-header {
+        margin-top: 50%;
+        font-size: 5vw;
+    }
+
+    .featured-name {
+        font-size: 50px;
+    }
+
+    .text-btn {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 
 
+    .text-info {
+        font-size: 14px;
+    }
 
+    .social-icons {
+        margin-top: 10px;
+    }
 
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
 
+    .section {
+        padding: 4em 0;
+    }
 
+    .about-info {
+        padding: 30px 20px;
+    }
 
+    .about-info .Profile {
+        width: 70px;
+        height: 70px;
+    }
+
+    .about-info h3 {
+        font-size: 1.2em;
+    }
+
+    .about-info p {
+        font-size: 0.9em;
+    }
+}
